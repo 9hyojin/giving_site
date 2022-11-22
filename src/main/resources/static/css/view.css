@@ -1,0 +1,151 @@
+
+@font-face{
+    font-family:"basic";
+    font-style:normal;
+    src:url(../font/NotoSansKR-Regular.otf) format('opentype');
+}
+
+
+:root{
+    --app-color:#1C61FF;
+}
+
+html, body{
+    padding:0;
+    margin:0;
+    background:#fff;
+    font-size:14px;
+    font-family:basic;
+}
+
+header{
+    height:60px;
+    width:100%;
+}
+
+header > div.header{
+    width:1070px;
+    height:100%;
+    background:#fff;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+header > div.header img{
+    height:85%;
+}
+
+
+.menu-item{
+    color:#585858;
+    font-size:15px;
+    font-weight:700;
+    cursor:pointer;
+    margin-left:20px;
+}
+
+.menu-item:hover{
+    color:var(--app-color);
+}
+
+.top-container{
+    width:100%;
+    height:640px;
+    position:relative;
+}
+
+.top-container > img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.top-container .div-in-container{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.6);
+}
+
+
+.div-in-container{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:40px;
+    font-weight:700;
+}
+
+
+
+.section-container{
+    width:100%;
+    padding:50px;
+}
+
+
+.section-container > div {
+    width:1070px;
+    margin:0 auto;
+}
+
+.info-card{
+    display:flex;
+    flex-direction:column;
+}
+
+
+.info-card > img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    border-radius:4px;
+}
+
+.info-card .title-1{
+    color:var(--app-color);
+    font-size:18px;
+    font-weight:700;
+    margin-top:10px;
+}
+
+.info-card .title-2{
+    color:#000;
+    font-size:15px;
+    font-weight:700;
+}
+
+
+.info-card p{
+    color:#999;
+    font-weight:500;
+    margin-top:5px;
+}
+
+
+
+.section-container.footer{
+    background:#f2f2f2;
+}
+
+
+.ft-box{
+    display:flex;
+    flex-direction:column;
+    margin-right:120px;
+}
+
+
+.ft-box .title{
+    color:#000;
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:10px;
+}
