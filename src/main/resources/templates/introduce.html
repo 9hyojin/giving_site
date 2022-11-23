@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
     <meta charset="UTF-8">
     <title>소개글</title>
+    <link rel="icon" href="./image/heart.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/view.css"/>
+    <script src="https://kit.fontawesome.com/9299056aff.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -61,7 +65,7 @@
     }
 
     .top-container > img{
-        width:50%;
+        width:100%;
         height:50%;
         object-fit:cover;
     }
@@ -83,10 +87,10 @@
             <img src="./image/givinglogo.png"/>
 
             <div>
-                <span class="menu-item">소개</span>
-                <span class="menu-item">Teacher</span>
-                <span class="menu-item">Student</span>
-                <span class="menu-item">로그인</span>
+                <span class="menu-item"><th><a th:href="@{/}">Home</a></th></span>
+                <span class="menu-item"><th><a th:href="@{/teacher}">Teacher</a></th></span>
+                <span class="menu-item"><th><a th:href="@{/}">Student</a></th></span>
+                <span class="menu-item"><th><a th:href="@{/}">Login</a></th></span>
             </div>
         </div>
     </header>
