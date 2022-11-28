@@ -2,14 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>login</title>
+    <title>SignUp</title>
     <link rel="icon" href="./image/heart.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./css/login.css"/>
     <script src="https://kit.fontawesome.com/9299056aff.js" crossorigin="anonymous"></script>
 
 </head>
-
 
 <body>
     <header>
@@ -26,17 +25,6 @@
         </div>
     </header>
 
-    <div class="login-wrapper">
-        <h2>Login</h2>
-        <form method="post" action="서버의url" id="login-form">
-            <input type="text" name="userName" placeholder="Email">
-            <input type="password" name="userPassword" placeholder="Password">
-            <span class="find-id" ><th><a th:href="@{/findId}" style="color: black">아이디/비밀번호 찾기</a></th></span>
-            <span class="sign-up"><th><a th:href="@{/signUp}" style="color: black">회원가입</a></th></span>
-            <input type="submit" value="Login">
-            <a th:href="@{https://kauth.kakao.com/oauth/authorize?client_id=4a11325f69a14397d97122888cf676f4&redirect_uri=http://localhost:8090/auth/kakao/callback&response_type=code
-}"><image th:src="@{/image/kakao_login_medium_narrow.png}"/></a>
-        </form>
-    </div>
 </body>
+
 </html>
