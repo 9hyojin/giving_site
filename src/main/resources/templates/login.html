@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>login</title>
@@ -9,10 +9,12 @@
     <script src="https://kit.fontawesome.com/9299056aff.js" crossorigin="anonymous"></script>
 
 </head>
+
+
 <body>
     <header>
         <div class="header">
-            <span> Talgiv </span>
+            <span class="logo"> Talgiv </span>
 
             <div>
                 <span class="menu-item"><th><a th:href="@{/}">Home</a></th></span>
@@ -29,9 +31,8 @@
         <form method="post" action="서버의url" id="login-form">
             <input type="text" name="userName" placeholder="Email">
             <input type="password" name="userPassword" placeholder="Password">
-            <label for="remember-check">
-                <input type="checkbox" id="remember-check">아이디 저장하기
-            </label>
+            <span class="find-id" ><th><a th:href="@{/findId}" style="color: black">아이디/비밀번호 찾기</a></th></span>
+            <span class="sign-up"><th><a th:href="@{/signUp}" style="color: black">회원가입</a></th></span>
             <input type="submit" value="Login">
         </form>
     </div>
