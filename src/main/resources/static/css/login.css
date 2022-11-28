@@ -54,14 +54,14 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
-.login-wrapper{
+.login-wrapper {
 
-    width: 300px;
+    width: 500px;
     height: 400px;
     padding: 30px;
     box-sizing: border-box;
-    margin-top: 100px;
-    margin-left: 35%;
+    margin-top: 3%;
+    margin-left: 25%;
 }
 
 
