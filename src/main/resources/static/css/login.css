@@ -56,12 +56,12 @@ body{
 
 .login-wrapper {
 
-    width: 500px;
+    margin-left: 33%;
+    margin-top: 30px;
+    width:  450px;
     height: 400px;
     padding: 30px;
     box-sizing: border-box;
-    margin-top: 3%;
-    margin-left: 25%;
 }
 
 

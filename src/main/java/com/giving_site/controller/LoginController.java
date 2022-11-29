@@ -1,11 +1,10 @@
 package com.giving_site.controller;
 
 
-
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.giving_site.model.KakaoProfile;
 import com.giving_site.model.OAuthToken;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.HttpHeaders;
+
 
 
 
@@ -58,6 +58,36 @@ public class LoginController {
 
         System.out.println("카카오엑세스토큰:" +oauthToken.getAccess_token());
 
-        return (String) response.getBody();
+
+
+        RestTemplate restTemplate2 = new RestTemplate();
+        HttpHeaders headers2 = new HttpHeaders();
+        headers2.add("Authorization","Bearer "+oauthToken.getAccess_token());
+        headers2.add("Content-type"," application/x-www-form-urlencoded;charset=utf-8");
+
+
+        HttpEntity<MultiValueMap<String,String>> kakaoProfileRequest = new HttpEntity<>(headers2);
+
+
+        ResponseEntity<String> response2 = restTemplate2.exchange(
+                "https://kapi.kakao.com//v2/user/me", HttpMethod.POST,kakaoProfileRequest,String.class);
+
+
+
+        ObjectMapper objectMapper2 = new ObjectMapper();
+        KakaoProfile kakaoProfile = null;
+        try{
+            kakaoProfile = objectMapper2.readValue(response2.getBody(),KakaoProfile.class);
+        }catch (JsonMappingException e){
+            e.printStackTrace();
+        }catch (JsonProcessingException e){
+            e.printStackTrace();
+        }
+
+        System.out.println("카카오아이디: " +kakaoProfile.getId());
+        System.out.println("카카오이메일: " +kakaoProfile.getKakao_account().getEmail());
+
+
+        return (String) response2.getBody();
     }
 }
