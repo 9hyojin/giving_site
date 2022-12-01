@@ -4,6 +4,7 @@ package com.giving_site.controller;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.giving_site.dto.TeacherDTO;
 import com.giving_site.model.KakaoProfile;
 import com.giving_site.model.OAuthToken;
 import org.springframework.http.HttpEntity;
@@ -13,15 +14,40 @@ import org.springframework.stereotype.Controller;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.http.HttpHeaders;
 
-
+import java.security.AuthProvider;
 
 
 @Controller
 public class LoginController {
+//
+//    @GetMapping("/login-form")
+//    public String loginForm(){
+//
+//        return "/view/loginForm";
+//    }
+//
+//    @PostMapping("/login")
+//    public String login(@ModelAttribute TeacherDTO teacherDTO){
+//        boolean loginResult = teacherService.login(teacherDTO);
+//        if (loginResult){
+//            return "/view/home";
+//        } else{
+//            return "/view/loginForm";
+//        }
+
+
+
+
+
+
+
+
 
     @GetMapping("/auth/kakao/callback")
     public @ResponseBody String kakaoCallback(String code) {

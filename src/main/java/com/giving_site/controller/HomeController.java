@@ -30,11 +30,11 @@ public class HomeController {
         return "/view/together";
     }
 
-    @GetMapping("/login")
-    public String login(){
-
-        return "/view/login";
-    }
+//    @GetMapping("/login")
+//    public String login(){
+//
+//        return "/view/login";
+//    }
 
 
 }

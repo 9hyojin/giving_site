@@ -25,6 +25,29 @@
     </div>
 </header>
 
+    <div class="signUp-wrapper">
+        <h2>선생님 회원가입</h2>
+        <form method="post" action="/SignUp/teacherSignUp" id="teacher-signUp">
+            <input type="text" name="userId" placeholder="아이디 입(6-20자)">
+            <button>중복확인</button>
+            <input type="password" name="userPassword" placeholder="비밀번호입력(문자,숫자,특수문자 포함 8-20자)">
+            <input type="password" name="userPassword2" placeholder="비밀번호 재입력">
+            <input type="text" name="userName" placeholder="이름">
+            <input type="text" name="userAddress" placeholder="주소를 입력해주세요">
+            <input type="number" name="userPhoneNumber" placeholder="휴대폰 번호 입력 ('-'제외 11자리 입력)">
+            <input type="email" name="userEMail" placeholder="Email">
+            <input type="date" name="userBirth" placeholder="생년월일">
+            <input type="submit" value="회원가입">
+
+
+
+<!--            <span class="find-id" ><th><a th:href="@{/findId}" style="color: black">아이디/비밀번호 찾기</a></th></span>-->
+<!--            <span class="sign-up"><th><a th:href="@{/signUp}" style="color: black">회원가입</a></th></span>-->
+<!--            <input type="submit" value="Login">-->
+<!--            <a th:href="@{https://kauth.kakao.com/oauth/authorize?client_id=4a11325f69a14397d97122888cf676f4&redirect_uri=http://localhost:8090/auth/kakao/callback&response_type=code}"><image th:src="@{/image/kakao_login_medium_narrow.png}"/></a>-->
+        </form>
+    </div>
+
 
 </body>
 </html>
