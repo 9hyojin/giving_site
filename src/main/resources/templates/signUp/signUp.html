@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+    <link rel="icon" href="./image/heart.jpg">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./css/signUp.css"/>
+    <script src="https://kit.fontawesome.com/9299056aff.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+<header>
+    <div class="header">
+        <span class="logo"> Talgiv </span>
+
+        <div>
+            <span class="menu-item"><th><a th:href="@{/home}" style="font-size: 20px; color: #dc5b16">Home</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/introduce}" style="font-size: 20px; color: #dc5b16">Introduce</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/teacher}" style="font-size: 20px; color: #dc5b16">Teacher</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/together}" style="font-size: 20px; color: #dc5b16">Together</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/login}" style="font-size: 20px">Login</a></th></span>
+
+        </div>
+    </div>
+</header>
+
+</body>
+    <div class="signUp">
+        <span class="teacherSignUp" ><th><a th:href="@{/teacherSignUp}" style="color: white">선생님 회원가입</a></th></span>
+        <span class="studentSignUp"><th><a th:href="@{/studentSignUp}" style="color: white">학생 회원가입</a></th></span>
+    </div>
+</body>
+</html>

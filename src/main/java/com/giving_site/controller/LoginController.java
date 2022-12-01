@@ -90,4 +90,10 @@ public class LoginController {
 
         return (String) response2.getBody();
     }
+
+    @GetMapping ("/signUp")
+    public String signUp(){
+        return "/signUp/signUp";
+    }
+
 }

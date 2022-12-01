@@ -2,7 +2,7 @@
 @font-face{
     font-family:"basic";
     font-style:normal;
-    /*src:url(../font/NotoSansKR-Regular.otf) format('opentype');*/
+    src:url(../font/NotoSansKR-Regular.otf) format('opentype');
 }
 
 
@@ -15,7 +15,7 @@ html, body{
     margin:0;
     background:#fff;
     font-size:14px;
-    /*font-family:basic;*/
+    font-family:basic;
 }
 
 header{
@@ -47,7 +47,7 @@ header > div.header img{
 
 .menu-item{
     color: #dc5b16;
-    font-size:30px;
+    font-size:15px;
     font-weight:700;
     cursor:pointer;
     margin-right:20px;

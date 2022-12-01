@@ -1,35 +1,51 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
-    <title>Teacher</title>
+    <title>재능 기부 사이트</title>
     <link rel="icon" href="./image/heart.jpg">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="./css/view.css"/>
     <script src="https://kit.fontawesome.com/9299056aff.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-    <header>
-        <div class="header">
-            <span class="logo"> Talgiv </span>
+<header>
+    <div class="header">
+        <span class="logo"> Talgiv </span>
 
-            <div>
-                <span class="menu-item"><th><a th:href="@{/}" style="font-size: 20px">Home</a></th></span>
-                <span class="menu-item"><th><a th:href="@{/introduce}" style="font-size: 20px">Introduce</a></th></span>
-                <span class="menu-item"><th><a th:href="@{/together}" style="font-size: 20px">Together</a></th></span>
-                <span class="menu-item"><th><a th:href="@{/login}" style="font-size: 20px">Login</a></th></span>
-            </div>
+        <div>
+            <span class="menu-item"><th><a th:href="@{/home}" style="font-size: 20px">Home</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/introduce}" style="font-size: 20px">Introduce</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/teacher}" style="font-size: 20px">Teacher</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/together}" style="font-size: 20px">Together</a></th></span>
+            <span class="menu-item"><th><a th:href="@{/login}" style="font-size: 20px">Login</a></th></span>
+
         </div>
-    </header>
+    </div>
+</header>
+
 
     <div class="top-container">
+        <img src="./image/giving.png"/>
+        <div class="div-in-container">
+                <span>
+                    <font style="color:#dc5b16">Give back</font> what you've learned
+                </span>
+            <span style="margin-top:20px;">
+                    <font style="color:#dc5b16">Share</font> your experience
+                </span>
+        </div>
+    </div>
+
+
+    <div class="section-container">
         <div class="row">
             <div class="col-4" style="padding:14px;">
                 <div class="info-card">
                     <img src="./image/beauty.jpg"/>
-                    <span class="title-1"><th><a th:href="@{/}">뷰티</a></th></span>
+                    <span class="title-1"><th><a th:href="@{/static}">뷰티</a></th></span>
                     <span class="title-2">네일/메이크업/헤어</span>
                     <p>
                         뷰티관련 배움내용
@@ -40,7 +56,7 @@
             <div class="col-4" style="padding:14px;">
                 <div class="info-card">
                     <img src="./image/certification2.png"/>
-                    <span class="title-1"><th><a th:href="@{/}">자격증/시험</a></th></span>
+                    <span class="title-1"><th><a th:href="@{/static}">자격증/시험</a></th></span>
                     <span class="title-2">공무원시험/공기업시험/한국사/기사자격증</span>
                     <p>
                         자격증/시험 배움내용
@@ -51,7 +67,7 @@
             <div class="col-4" style="padding:14px;">
                 <div class="info-card">
                     <img src="./image/barista.png"/>
-                    <span class="title-1"><th><a th:href="@{/}">음식/음료</a></th></span>
+                    <span class="title-1"><th><a th:href="@{/static}">음식/음료</a></th></span>
                     <span class="title-2">조리사/베이킹/커피</span>
                     <p>
                         음식/음료 배움내용
@@ -62,7 +78,7 @@
             <div class="col-4" style="padding:14px;">
                 <div class="info-card">
                     <img src="./image/arts.jpg"/>
-                    <span class="title-1"><th><a th:href="@{/}">예술</a></th></span>
+                    <span class="title-1"><th><a th:href="@{/static}">예술</a></th></span>
                     <span class="title-2">음악/미술/연기/사진</span>
                     <p>
                         예술 배움내용
@@ -73,7 +89,7 @@
             <div class="col-4" style="padding:14px;">
                 <div class="info-card">
                     <img src="./image/programmer.jpg"/>
-                    <span class="title-1"><th><a th:href="@{/}">개발/디자인</a></th></span>
+                    <span class="title-1"><th><a th:href="@{/static}">개발/디자인</a></th></span>
                     <span class="title-2">웹디자인/프론트엔드/백엔드</span>
                     <p>
                         개발/디자인 배움내용
@@ -85,7 +101,7 @@
             <div class="col-4" style="padding:14px;">
                 <div class="info-card">
                     <img src="./image/language.jpg"/>
-                    <span class="title-1"><th><a th:href="@{/}">언어</a></th></span>
+                    <span class="title-1"><th><a th:href="@{/static}">언어</a></th></span>
                     <span class="title-2">영어/일본어/중국어/스페인어/러시아어</span>
                     <p>
                         언어 배움내용
@@ -95,5 +111,38 @@
         </div>
     </div>
 
+    <div class="section-container">
+    </div>
+
+
+
+    <div class="section-container footer">
+        <div style="display:flex;">
+            <div class="ft-box">
+                <span class="title">나의 이력</span>
+                <span>대학교졸업</span>
+                <span>개발창업</span>
+                <span>풀스텍개발자근무</span>
+                <span>여러가지 프로젝트 참여</span>
+            </div>
+
+            <div class="ft-box">
+                <span class="title">기술스택</span>
+                <span>Spring Framework</span>
+                <span>html / css / js</span>
+                <span>Linux 서버</span>
+                <span>mySQL</span>
+            </div>
+
+            <div class="ft-box">
+                <span class="title">나의 취미</span>
+                <span>카페에서 개발하기</span>
+                <span>주말 축구하기</span>
+                <span>영화보기</span>
+                <span>혼자산책</span>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
