@@ -2,7 +2,7 @@
 @font-face{
     font-family:"basic";
     font-style:normal;
-    src:url(../font/NotoSansKR-Regular.otf) format('opentype');
+    /*src:url(../font/NotoSansKR-Regular.otf) format('opentype');*/
 }
 
 
@@ -74,12 +74,13 @@ body{
 
 .signUp-wrapper {
 
-    margin-left: 33%;
-    margin-top: 30px;
-    width:  700px;
-    height: 600px;
+    margin-left: 20%;
+    margin-top: 10px;
+    width:  60%;
+    height: 80%;
     padding: 30px;
     box-sizing: border-box;
+    background-color: #b6b1ad;
 }
 
 
@@ -87,6 +88,7 @@ body{
     font-size: 24px;
     color: #dc5b16;
     margin-bottom: 20px;
+
 }
 
 #teacher-signUp > input{
@@ -98,6 +100,10 @@ body{
     border-radius: 6px;
     background-color: #F8F8F8;
 }
+#teacher-signUp > button{
+    margin-bottom: 20px;
+}
+
 #teacher-signUp > input::placeholder{
     color: #D2D2D2;
 }
@@ -115,7 +121,6 @@ body{
     box-sizing: border-box;
     background-color: #dc5b16;
     align-content: center;
-
 }
 
 .studentSignUp{
@@ -125,9 +130,9 @@ body{
 
 }
 
-.signUp-wrapper #signUp-id {
-    position: relative;
-}
+/*.signUp-wrapper #signUp-id {*/
+/*    position: relative;*/
+/*}*/
 
 /*#signUp-id button {*/
 /*    position: absolute;*/

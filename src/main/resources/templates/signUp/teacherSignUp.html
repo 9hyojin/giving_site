@@ -27,17 +27,17 @@
 
     <div class="signUp-wrapper">
         <h2>선생님 회원가입</h2>
-        <form method="post" action="/SignUp/teacherSignUp" id="teacher-signUp">
-            <input type="text" name="userId" placeholder="아이디 입(6-20자)">
-            <button>중복확인</button>
-            <input type="password" name="userPassword" placeholder="비밀번호입력(문자,숫자,특수문자 포함 8-20자)">
-            <input type="password" name="userPassword2" placeholder="비밀번호 재입력">
-            <input type="text" name="userName" placeholder="이름">
-            <input type="text" name="userAddress" placeholder="주소를 입력해주세요">
-            <input type="number" name="userPhoneNumber" placeholder="휴대폰 번호 입력 ('-'제외 11자리 입력)">
-            <input type="email" name="userEMail" placeholder="Email">
-            <input type="date" name="userBirth" placeholder="생년월일">
-            <input type="submit" value="회원가입">
+        <form method="post" action="/teacherSignUp" id="teacher-signUp">
+            아이디:<input type="text" name="userId" placeholder="아이디 입력(6-20자)">
+            <button>중복확인</button><br>
+            비밀번호:<input type="password" name="userPassword" placeholder="비밀번호입력(문자,숫자,특수문자 포함 8-20자)"><br>
+            비밀번호 재입력:<input type="password" name="userPassword2" placeholder="비밀번호 재입력"><br>
+            이름:<input type="text" name="userName" placeholder="이름"><br>
+            주소:<input type="text" name="userAddress" placeholder="주소를 입력해주세요"><br>
+            휴대폰번호:<input type="number" name="userPhoneNumber" placeholder="휴대폰 번호 입력 ('-'제외 11자리 입력)"><br>
+            이메일:<input type="email" name="userEmail" placeholder="Email"><br>
+
+            <input type="submit" value="회원가입"><br>
 
 
 

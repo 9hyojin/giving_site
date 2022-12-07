@@ -30,11 +30,8 @@ public class HomeController {
         return "/view/together";
     }
 
-//    @GetMapping("/login")
-//    public String login(){
-//
-//        return "/view/login";
-//    }
-
-
+    @GetMapping("/loginForm")
+    public String loginForm(){
+        return "/view/loginForm";
+    }
 }

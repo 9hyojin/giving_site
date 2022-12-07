@@ -21,7 +21,7 @@
                 <span class="menu-item"><th><a th:href="@{/introduce}" style="font-size: 20px">Introduce</a></th></span>
                 <span class="menu-item"><th><a th:href="@{/teacher}" style="font-size: 20px">Teacher</a></th></span>
                 <span class="menu-item"><th><a th:href="@{/together}" style="font-size: 20px">Together</a></th></span>
-                <span class="menu-item"><th><a th:href="@{/login}" style="font-size: 20px">Login</a></th></span>
+                <span class="menu-item"><th><a th:href="@{/loginForm}" style="font-size: 20px">Login</a></th></span>
 
             </div>
         </div>
@@ -29,7 +29,7 @@
 
     <div class="login-wrapper">
         <h2>Login</h2>
-        <form method="post" action="서버의url" id="login-form">
+        <form method="post" action="/login" id="login-form">
             <input type="text" name="userName" placeholder="Email">
             <input type="password" name="userPassword" placeholder="Password">
             <span class="find-id" ><th><a th:href="@{/findId}" style="color: black">아이디/비밀번호 찾기</a></th></span>

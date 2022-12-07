@@ -7,54 +7,48 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 
 @Controller
 @RequiredArgsConstructor
-@RequestMapping("/teacher")
-public class SignUpController {
+public class TeacherController {
+
     private final TeacherService teacherService;
 
+    @GetMapping("/signUp")
+    public String signUp(){
+        return "/signUp/signUp";
+    }
+
     @GetMapping("/teacherSignUp")
-    public String saveForm() {
+    public String saveForm(){
         return "/signUp/teacherSignUp";
     }
 
-    @PostMapping("/save")
+
+    @PostMapping("/teacherSignUp")
     public String save(@ModelAttribute TeacherDTO teacherDTO) {
         teacherService.save(teacherDTO);
-        return "login";
-
+        return "/view/loginForm";
     }
 
-    @GetMapping("/login-form")
-    public String loginForm() {
 
-        return "/view/loginForm";
+    @GetMapping("/login")
+    public String loginForm(){
+        return"/view/loginForm";
+
     }
 
     @PostMapping("/login")
     public String login(@ModelAttribute TeacherDTO teacherDTO, HttpSession session) {
         TeacherDTO loginResult = teacherService.login(teacherDTO);
         if (loginResult != null) {
-            session.setAttribute("loginEmail", loginResult.getUserEMail());
-            session.setAttribute("id", loginResult.getUserId());
-            return "/view/home";
+            //로그인성공
+            session.setAttribute("loginId", loginResult.getUserId());
         } else {
-            return "/view/loginForm";
+            //로그인실패
         }
-
+        return "login";
     }
 }
-//    @GetMapping("/teacherSignUp")
-//    public String teacherSignUp(){
-//        return "/signUp/teacherSignUp";
-//    }
-//
-//    @GetMapping("/studentSignUp")
-//    public String studentSignUp(){
-//        return "/signUp/studentSignUp";
-//    }
-

@@ -1,50 +1,62 @@
 package com.giving_site.entity;
 
+
 import com.giving_site.dto.TeacherDTO;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "talgiv", schema = "talgiv")
+@Table(name="teacher")
 public class TeacherEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id //pk지정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //auto_increment 지정
     private Long id;
 
-    @Column(length = 50 , unique = true)
+    @Column
     private String userId;
 
-    @Column(length = 20)
+    @Column
     private String userPassword;
-    @Column(length = 20)
-    private String userPassword2;
-    @Column(length = 20)
-    private String userName;
-    @Column(length = 50)
-    private String userAddress;
-    @Column(length = 20)
-    private int userPhoneNumber;
-    @Column(length = 50)
-    private String userEMail;
-    @Column(length = 20)
-    private int userBirth;
 
-    public static TeacherEntity toSaveEntity(TeacherDTO teacherDTO){
+    @Column
+    private String userPassword2;
+
+    @Column
+    private String userName;
+
+    @Column
+    private String userAddress;
+
+    @Column
+    private Integer userPhoneNumber;
+
+    @Column
+    private String userEmail;
+
+
+
+
+    //dto -> entity 변환
+    public  static TeacherEntity toTeacherEntity(TeacherDTO teacherDTO){
         TeacherEntity teacherEntity = new TeacherEntity();
-        teacherEntity.setId(teacherDTO.getUserId());
-        teacherEntity.setUserPassword((teacherDTO.getUserPassword()));
+
+        teacherEntity.setId(teacherDTO.getId());
+        teacherEntity.setUserId(teacherDTO.getUserId());
+        teacherEntity.setUserPassword(teacherDTO.getUserPassword());
         teacherEntity.setUserPassword2(teacherDTO.getUserPassword2());
         teacherEntity.setUserName(teacherDTO.getUserName());
         teacherEntity.setUserAddress(teacherDTO.getUserAddress());
-        teacherEntity.setUserEMail(teacherDTO.getUserEMail());
         teacherEntity.setUserPhoneNumber(teacherDTO.getUserPhoneNumber());
-        teacherEntity.setUserBirth(teacherDTO.getUserBirth());
+        teacherEntity.setUserEmail(teacherDTO.getUserEmail());
+
 
         return teacherEntity;
     }
+
 
 }

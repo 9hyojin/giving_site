@@ -1,31 +1,44 @@
 package com.giving_site.dto;
 
 import com.giving_site.entity.TeacherEntity;
-import lombok.Data;
+import lombok.*;
 
-@Data
+import java.util.Date;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class TeacherDTO {
-    private Long userId;
+    private Long id;
+    private String userId;
     private String userPassword;
     private String userPassword2;
     private String userName;
     private String userAddress;
-    private int userPhoneNumber;
-    private String userEMail;
-    private int userBirth;
+    private Integer userPhoneNumber;
+    private String userEmail;
 
 
-    public static TeacherDTO toTeacherDTO(TeacherEntity teacherEntity){
+
+    //entity -> dto변환
+    public static TeacherDTO toTeacherDTO(TeacherEntity teacherEntity) {
         TeacherDTO teacherDTO = new TeacherDTO();
-        teacherDTO.setUserId(teacherEntity.getId());
+
+        teacherDTO.setId(teacherEntity.getId());
+        teacherDTO.setUserId(teacherEntity.getUserId());
         teacherDTO.setUserPassword(teacherEntity.getUserPassword());
         teacherDTO.setUserPassword2(teacherEntity.getUserPassword2());
         teacherDTO.setUserName(teacherEntity.getUserName());
         teacherDTO.setUserAddress(teacherEntity.getUserAddress());
-        teacherDTO.setUserEMail(teacherEntity.getUserEMail());
         teacherDTO.setUserPhoneNumber(teacherEntity.getUserPhoneNumber());
-        teacherDTO.setUserBirth(teacherEntity.getUserBirth());
+        teacherDTO.setUserEmail(teacherEntity.getUserEmail());
+
+
+
         return teacherDTO;
     }
 
 }
+
